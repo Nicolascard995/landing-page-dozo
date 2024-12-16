@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Proyectos{% endblock %}
+
+{% block content %}
+<h2>Mis Proyectos</h2>
+<div class="project-grid">
+    <div class="project">
+        <img src="{{ url_for('static', filename='img/proyecto1.png') }}" alt="Proyecto 1">
+        <h3>Proyecto 1</h3>
+        <p>Descripción breve del proyecto.</p>
+    </div>
+    <div class="project">
+        <img src="{{ url_for('static', filename='img/proyecto2.png') }}" alt="Proyecto 2">
+        <h3>Proyecto 2</h3>
+        <p>Descripción breve del proyecto.</p>
+    </div>
+</div>
+{% endblock %}
