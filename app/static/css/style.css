@@ -1,106 +1,57 @@
+/* style.css */
+:root {
+    --bg-gradient-start: #2a2d34; /* Fondo oscuro principal */
+    --bg-gradient-end: #00b894;  /* Verde estilo Anahata Chakra */
+    --button-hover-start: #243238; /* Hover oscuro */
+    --button-hover-end: #931a79;   /* Hover verde */
+    --text-color: rgba(255, 255, 255, 0.9); /* Texto claro */
+    --navbar-bg-color: rgba(31, 31, 31, 0.8); /* Navbar translúcido */
+    --glass-bg: rgba(255, 255, 255, 0.1); /* Glassmorphism fondo */
+    --glass-border: rgba(255, 255, 255, 0.2); /* Glassmorphism borde */
+    --font-family: 'Inter', sans-serif; /* Fuente global */
+}
+
 body {
-    /* Establece la fuente, márgenes, relleno, color de fondo y color de texto del cuerpo */
-    font-family: 'Arial', sans-serif;
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    color: var(--text-color);
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-header {
-    /* Establece el color de fondo, color de texto, relleno y alineación del texto del encabezado */
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
+.navbar {
+    transition: background-color 0.3s ease-in-out;
 }
 
-nav a {
-    /* Establece el color, margen y decoración del texto de los enlaces de navegación */
-    color: #fff;
-    margin: 0 1em;
-    text-decoration: none;
+.navbar--scrolled {
+    background-color: var(--navbar-bg-color);
 }
 
-main {
-    /* Establece el relleno, ancho máximo y margen del contenido principal */
-    padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
+.mobile-menu {
+    background-color: var(--navbar-bg-color);
+    transition: max-height 0.3s ease-in-out;
 }
 
-.project-grid {
-    /* Define una cuadrícula para los proyectos con columnas automáticas y un espacio entre elementos */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2em;
+.button {
+    background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
 }
 
-.project img {
-    /* Establece el ancho máximo y el radio del borde de las imágenes de los proyectos */
-    max-width: 100%;
-    border-radius: 5px;
+.button:hover {
+    background: linear-gradient(135deg, var(--button-hover-start), var(--button-hover-end));
+    color: #ffffff;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Botón principal con gradiente y sombra */
-.button-primary {
-    /* Establece el relleno, peso de la fuente, radio del borde, sombra, transformación, transición, fondo, color y filtro de fondo del botón principal */
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-    border-radius: 0.5rem;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    transform: translateZ(0);
-    transition: all 0.3s ease-in-out;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-    color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+.glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
     backdrop-filter: blur(10px);
-}
-
-.button-primary:hover {
-    /* Cambia el fondo, sombra y tamaño del botón principal al pasar el cursor */
-    background: linear-gradient(to right, black, #00b894); /* Gradiente negro-verde */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más profunda al pasar el cursor */
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
-}
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Personalización adicional */
-body {
-    @apply font-sans m-0 p-0 bg-lightGray text-darkGray;
-}
-
-header {
-    @apply bg-darkGray text-white py-4 text-center;
-}
-
-nav a {
-    @apply text-white mx-4 no-underline hover:underline;
-}
-
-main {
-    @apply p-8 max-w-3xl mx-auto;
-}
-
-.project-grid {
-    @apply grid gap-8;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Utilidad no estándar para ajustar columnas dinámicas */
-}
-
-.project img {
-    @apply max-w-full rounded-lg shadow-md;
-}
-
-/* Botón principal con gradiente y sombra */
-.button-primary {
-    @apply px-6 py-3 font-semibold rounded-lg shadow-lg transition-all duration-300 bg-opacity-20 text-white backdrop-blur;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
-}
-
-.button-primary:hover {
-    @apply scale-105;
-    background: linear-gradient(to right, black, #00b894); /* Gradiente negro-verde */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Sombra más profunda */
+    border-radius: 0.375rem;
+    padding: 1rem;
 }

@@ -5,74 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dozo Tech</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --bg-gradient-start: #0b0c10; /* Fondo oscuro inicial */
-            --bg-gradient-end: #0cee23; /* Fondo oscuro final */
-            --button-hover-start: #243238; /* Verde oscuro */
-            --button-hover-end: #931a79; /* Verde chakra */
-            --text-color: rgba(255, 255, 255, 0.9); /* Color texto claro */
-            --navbar-bg-color: rgba(31, 31, 31, 0.8); /* Fondo translúcido navbar */
-            --glass-bg: rgba(255, 255, 255, 0.1); /* Fondo translúcido para glassmorphism */
-            --glass-border: rgba(255, 255, 255, 0.2); /* Borde translúcido para glassmorphism */
-        }
-        body {
-            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-            color: var(--text-color);
-        }
-        .button {
-            background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
-            border: 2px solid var(--text-color);
-            color: var(--text-color);
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            transition: background 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
-        }
-        .button:hover {
-            background: linear-gradient(135deg, var(--button-hover-start), var(--button-hover-end));
-            color: #ffffff;
-            transform: scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-        .navbar {
-            transition: background-color 0.3s ease-in-out;
-        }
-        .navbar--scrolled {
-            background-color: var(--navbar-bg-color);
-        }
-        .mobile-menu {
-            background-color: var(--navbar-bg-color);
-            transition: max-height 0.3s ease-in-out;
-        }
-        .glass {
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(10px);
-            border-radius: 0.375rem;
-            padding: 1rem;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="/static/css/style.css" rel="stylesheet"> <!-- Importar el style.css -->
 </head>
-<body class="bg-customDark text-white font-sans">
+<body class="font-sans text-white">
     <!-- Navbar -->
     <nav class="navbar bg-transparent backdrop-blur-lg shadow-md fixed top-0 w-full z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <a href="/" class="text-2xl font-bold text-white">Dozo Tech</a>
-            <button id="menu-toggle" class="block md:hidden text-white focus:outline-none">
+            <!-- Logo y título -->
+            <div class="flex items-center space-x-3">
+                <img src="/static/img/dozologo.svg" alt="Logo Dozo Tech" class="w-10 h-auto">
+                <a href="/" class="text-2xl font-bold">Dozo Tech</a>
+            </div>
+            <!-- Menú -->
+            <button id="menu-toggle" class="block md:hidden focus:outline-none">
                 ☰
             </button>
             <ul id="menu" class="hidden md:flex space-x-6">
-                <li><a href="/" class="text-white hover:text-gray-400">Inicio</a></li>
-                <li><a href="#about" class="text-white hover:text-gray-400">Acerca de</a></li>
-                <li><a href="#services" class="text-white hover:text-gray-400">Servicios</a></li>
-                <li><a href="#contact" class="text-white hover:text-gray-400">Contacto</a></li>
+                <li><a href="/" class="hover:text-gray-400">Inicio</a></li>
+                <li><a href="#about" class="hover:text-gray-400">Acerca de</a></li>
+                <li><a href="#services" class="hover:text-gray-400">Servicios</a></li>
+                <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
             </ul>
         </div>
+        <!-- Menú móvil -->
         <ul id="mobile-menu" class="mobile-menu hidden flex-col space-y-4 p-4 md:hidden">
-            <li><a href="/" class="text-white hover:text-gray-400">Inicio</a></li>
-            <li><a href="#about" class="text-white hover:text-gray-400">Acerca de</a></li>
-            <li><a href="#services" class="text-white hover:text-gray-400">Servicios</a></li>
-            <li><a href="#contact" class="text-white hover:text-gray-400">Contacto</a></li>
+            <li><a href="/" class="hover:text-gray-400">Inicio</a></li>
+            <li><a href="#about" class="hover:text-gray-400">Acerca de</a></li>
+            <li><a href="#services" class="hover:text-gray-400">Servicios</a></li>
+            <li><a href="#contact" class="hover:text-gray-400">Contacto</a></li>
         </ul>
     </nav>
 
@@ -85,30 +46,45 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-10">
+    <footer class="bg-gray-900 text-white py-10">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div>
-                <h4 class="text-lg font-bold">Sobre Dozo Tech</h4>
-                <p class="mt-2 text-gray-400">Creando soluciones modernas con datos y tecnología.</p>
+            <!-- Logo y Sobre Nosotros -->
+            <div class="flex flex-col md:flex-row items-center md:items-start space-x-4">
+                <!-- Logo -->
+                <img src="/static/img/dozologo.svg" alt="Logo Dozo Tech" class="w-20 h-auto">
+                <!-- Descripción -->
+                <div>
+                    <h4 class="text-lg font-bold mb-2">Sobre Dozo Tech</h4>
+                    <p class="text-gray-400">
+                        Creando soluciones modernas con datos y tecnología para transformar decisiones en resultados.
+                    </p>
+                </div>
             </div>
+        
+            <!-- Enlaces -->
             <div>
-                <h4 class="text-lg font-bold">Enlaces</h4>
-                <ul class="mt-2 space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-gray-100">Inicio</a></li>
+                <h4 class="text-lg font-bold mb-4">Enlaces</h4>
+                <ul class="space-y-2">
+                    <li><a href="/" class="text-gray-400 hover:text-gray-100">Inicio</a></li>
                     <li><a href="#services" class="text-gray-400 hover:text-gray-100">Servicios</a></li>
                     <li><a href="#contact" class="text-gray-400 hover:text-gray-100">Contacto</a></li>
                 </ul>
             </div>
+        
+            <!-- Redes Sociales -->
             <div>
-                <h4 class="text-lg font-bold">Síguenos</h4>
-                <div class="flex mt-2 space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-gray-100">Twitter</a>
-                    <a href="#" class="text-gray-400 hover:text-gray-100">GitHub</a>
-                </div>
+                <h4 class="text-lg font-bold mb-4">Síguenos</h4>
+                <ul class="space-y-2">
+                    <li><a href="https://instagram.com/dozo.tech" target="_blank" class="text-gray-400 hover:text-gray-100">Instagram</a></li>
+                    <li><a href="https://medium.com/nicolascard95" target="_blank" class="text-gray-400 hover:text-gray-100">Medium</a></li>
+                    <li><a href="https://github.com/Nicolascard995" target="_blank" class="text-gray-400 hover:text-gray-100">GitHub</a></li>
+                    <li><a href="https://www.linkedin.com/feed/" target="_blank" class="text-gray-400 hover:text-gray-100">LinkedIn</a></li>
+                </ul>
             </div>
         </div>
     </footer>
-
+    
+    <!-- Scripts -->
     <script>
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');

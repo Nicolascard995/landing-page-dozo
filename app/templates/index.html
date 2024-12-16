@@ -1,81 +1,161 @@
 {% extends "base.html" %}
 
 {% block content %}
-<!-- Hero Section -->
+<<!-- Sección Hero -->
 <section class="relative bg-gradient-to-r from-customGradientStart to-customGradientEnd text-center py-20 flex flex-col items-center justify-center">
-    <div class="container mx-auto px-4">
-      <!-- Main Heading -->
-      <h1 class="text-6xl font-bold text-white leading-tight">
-        Transforma decisiones con datos
+  <div class="container mx-auto px-4">
+      <!-- Título Principal con Copywriting Persuasivo -->
+      <h1 class="text-6xl font-bold text-white leading-tight drop-shadow-lg">
+          Domina el futuro con datos
       </h1>
-      <!-- Subheading -->
+      <!-- Subtítulo Inspirador -->
       <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">
-        Potenciamos empresas con inteligencia artificial y análisis avanzado para resultados extraordinarios.
+          En <strong>Dozo Tech</strong>, llevamos tus datos al siguiente nivel con análisis avanzado e inteligencia artificial, generando resultados que marcan la diferencia.
       </p>
-      <!-- Call to Action Buttons -->
+      <!-- Botones de Llamada a la Acción -->
       <div class="mt-6 space-x-4">
-        <a href="#contact" class="button-primary">
-            Contáctanos
+          <a href="#contact" class="button-glass">
+              ¡Hablemos!
           </a>
-          <a href="#services" class="button-primary">
-            Nuestros Servicios
-          </a>          
+          <a href="#services" class="button-glass">
+              Explorar Servicios
+          </a>
       </div>
-    </div>
-  </section>
-
-<!-- About Section -->
-<section id="about" class="py-16">
+  </div>
+</section>
+<!-- Sección Customers Pain -->
+<section id="pain-points" class="py-16 bg-gray-800">
   <div class="container mx-auto text-center">
-    <!-- About Heading -->
-    <h2 class="text-3xl font-bold mb-6">Acerca de Nosotros</h2>
-    <!-- About Description -->
-    <p class="text-gray-400 max-w-3xl mx-auto">
-      En Dozo Tech, ayudamos a empresas a tomar decisiones basadas en datos, integrando tecnologías de Machine Learning, IA y más.
-    </p>
+      <!-- Encabezado que conecta emocionalmente -->
+      <h2 class="text-3xl font-bold text-white mb-6">¿Te enfrentas a estos desafíos?</h2>
+      <!-- Subtítulo con empatía hacia el cliente -->
+      <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+          Sabemos lo frustrante que puede ser manejar datos desorganizados o tomar decisiones sin un análisis claro. En <strong>Dozo Tech</strong>, entendemos tus retos y te ofrecemos soluciones efectivas.
+      </p>
+      <!-- Grid con los problemas más comunes -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Problema 1 -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+              <h3 class="text-xl font-semibold text-white mb-2">Datos Desorganizados</h3>
+              <p class="text-gray-400">
+                  Perder tiempo buscando información clave entre datos dispersos o incompletos.
+              </p>
+          </div>
+          <!-- Problema 2 -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+              <h3 class="text-xl font-semibold text-white mb-2">Falta de Estrategia</h3>
+              <p class="text-gray-400">
+                  Tomar decisiones sin un análisis claro o datos confiables que las respalden.
+              </p>
+          </div>
+          <!-- Problema 3 -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+              <h3 class="text-xl font-semibold text-white mb-2">Crecimiento Estancado</h3>
+              <p class="text-gray-400">
+                  No alcanzar el siguiente nivel debido a la falta de insights estratégicos.
+              </p>
+          </div>
+          <!-- Problema 4 -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+              <h3 class="text-xl font-semibold text-white mb-2">Falta de Automatización</h3>
+              <p class="text-gray-400">
+                  Procesos manuales que consumen tiempo y recursos valiosos de tu equipo.
+              </p>
+          </div>
+          <!-- Problema 5 -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+              <h3 class="text-xl font-semibold text-white mb-2">Desaprovechamiento de Datos</h3>
+              <p class="text-gray-400">
+                  Tener datos valiosos sin saber cómo extraer insights accionables de ellos.
+              </p>
+          </div>
+          <!-- Problema 6 -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+              <h3 class="text-xl font-semibold text-white mb-2">Competencia Más Rápida</h3>
+              <p class="text-gray-400">
+                  Ver cómo tus competidores te superan al utilizar herramientas avanzadas.
+              </p>
+          </div>
+      </div>
+      <!-- Llamada a la acción después de los puntos de dolor -->
+      <div class="mt-8">
+          <a href="#contact" class="button-glass">
+              ¡Descubre Cómo Podemos Ayudarte!
+          </a>
+      </div>
+  </div>
+</section>
+
+<!-- Sección Acerca de Nosotros -->
+<section id="about" class="py-16 bg-gray-900">
+  <div class="container mx-auto text-center">
+      <!-- Encabezado Impactante -->
+      <h2 class="text-3xl font-bold text-white mb-6">Revolucionando el <span class="text-green-400">Futuro Empresarial</span></h2>
+      <!-- Descripción con Historia del Fundador -->
+      <p class="text-gray-400 max-w-3xl mx-auto leading-relaxed">
+          Fundada por <strong>Nicolás Cardozo</strong>, un emprendedor apasionado por los datos, <strong>Dozo Tech</strong> simplifica la complejidad de la ciencia de datos, convirtiéndola en soluciones prácticas y accesibles. 
+          Con experiencia en <em>Machine Learning</em>, <em>bots capturadores de leads</em>, e implementación de <span class="text-green-400">infraestructuras en la nube</span>, nuestra misión es empoderar empresas para tomar decisiones más inteligentes y sostenibles. 
+          Ofrecemos desde <span class="text-green-400">análisis exploratorios</span> hasta estrategias basadas en datos que impulsan resultados reales.
+      </p>
+      <!-- Cita Inspiradora -->
+      <blockquote class="mt-6 text-gray-300 italic max-w-xl mx-auto">
+          "Creemos que el conocimiento basado en datos no debería ser un lujo, sino la base de toda empresa que aspire a prosperar en la era digital."
+      </blockquote>
   </div>
 </section>
 
 <!-- Services Section -->
 <section id="services" class="bg-gray-800 py-16">
-  <div class="container mx-auto text-center">
-    <!-- Services Heading -->
-    <h2 class="text-3xl font-bold text-white mb-8">Servicios</h2>
-    <!-- Services Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Service Item 1 -->
-      <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-white">Análisis de Datos</h3>
-        <p class="text-gray-400">Descubre oportunidades ocultas en tus datos.</p>
-      </div>
-      <!-- Service Item 2 -->
-      <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-white">Machine Learning</h3>
-        <p class="text-gray-400">Optimiza procesos con modelos predictivos.</p>
-      </div>
-      <!-- Service Item 3 -->
-      <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
-        <h3 class="text-xl font-semibold text-white">Consultoría</h3>
-        <p class="text-gray-400">Soluciones personalizadas para tu negocio.</p>
-      </div>
+    <div class="container mx-auto text-center">
+        <!-- Encabezado de la sección "Servicios" -->
+        <h2 class="text-3xl font-bold text-white mb-8">Servicios</h2>
+        <!-- Grid para los servicios ofrecidos -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Servicio 1: Análisis de Datos -->
+            <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+                <h3 class="text-xl font-semibold text-white">Análisis de Datos</h3>
+                <p class="text-gray-400">Descubre oportunidades ocultas en tus datos.</p>
+            </div>
+            <!-- Servicio 2: Machine Learning -->
+            <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+                <h3 class="text-xl font-semibold text-white">Machine Learning</h3>
+                <p class="text-gray-400">Optimiza procesos con modelos predictivos.</p>
+            </div>
+            <!-- Servicio 3: Consultoría -->
+            <div class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl transition-all">
+                <h3 class="text-xl font-semibold text-white">Consultoría</h3>
+                <p class="text-gray-400">Soluciones personalizadas para tu negocio.</p>
+            </div>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Contact Section -->
 <section id="contact" class="py-16 bg-gray-900">
-  <div class="container mx-auto text-center">
-    <!-- Contact Heading -->
-    <h2 class="text-3xl font-bold text-white mb-8">Contáctanos</h2>
-    <!-- Contact Form -->
-    <form class="max-w-lg mx-auto">
-      <input type="text" name="name" placeholder="Nombre" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg">
-      <input type="email" name="email" placeholder="Email" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg">
-      <textarea name="message" placeholder="Mensaje" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg"></textarea>
-      <button type="submit" class="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
-        Enviar
-      </button>
-    </form>
-  </div>
+    <div class="container mx-auto text-center">
+        <!-- Encabezado de la sección "Contáctanos" -->
+        <h2 class="text-3xl font-bold text-white mb-8">Contáctanos</h2>
+        <!-- Formulario de contacto -->
+        <form class="max-w-lg mx-auto">
+            <input type="text" name="name" placeholder="Nombre" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg">
+            <input type="email" name="email" placeholder="Email" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg">
+            <textarea name="message" placeholder="Mensaje" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg"></textarea>
+            <button type="submit" class="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all">
+                Enviar
+            </button>
+        </form>
+    </div>
 </section>
+
+<!-- Espacios para scripts de análisis -->
+<script>
+    // Inserta Google Analytics aquí
+    // Ejemplo:
+    // gtag('config', 'TU-ID-DE-GOOGLE-ANALYTICS');
+
+    // Inserta Meta Pixel aquí
+    // Ejemplo:
+    // fbq('init', 'TU-ID-DE-META-PIXEL');
+</script>
+
 {% endblock %}
