@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dozo Tech</title>
+    <!-- TailwindCSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos personalizados -->
     <link href="/static/css/style.css" rel="stylesheet"> <!-- Importar el style.css -->
 </head>
 <body class="font-sans text-white">
@@ -40,8 +43,7 @@
     <!-- Main Content -->
     <main class="pt-20">
         {% block content %}
-        <a href="#contact" class="button">Contáctanos</a>
-        <a href="#services" class="button">Nuestros Servicios</a>
+        <!-- Bloque dinámico para el contenido de cada página -->
         {% endblock %}
     </main>
 
@@ -85,6 +87,7 @@
     </footer>
     
     <!-- Scripts -->
+    <script src="/static/js/script.js"></script>
     <script>
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');

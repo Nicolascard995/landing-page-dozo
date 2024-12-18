@@ -154,19 +154,75 @@
 </section>
 
 
-<!-- Sección Contacto -->
-<section id="contact" class="py-16 bg-gray-900">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-white mb-8">Contáctanos</h2>
-        <form class="max-w-lg mx-auto">
-            <input type="text" name="name" placeholder="Nombre" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg">
-            <input type="email" name="email" placeholder="Email" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg">
-            <textarea name="message" placeholder="Mensaje" class="w-full p-3 mb-4 bg-gray-800 text-white rounded-lg"></textarea>
-            <button type="submit" class="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all">
-                Enviar
-            </button>
-        </form>
+<!-- Sección de Formulario para Capturar Leads -->
+<section class="flex items-center justify-center h-screen bg-gray-900">
+    <div class="bg-white shadow-lg rounded-lg flex max-w-3xl w-full overflow-hidden">
+        <!-- Formulario -->
+        <div class="w-full p-8 flex flex-col justify-center">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800">¿Cuál es tu mayor desafío empresarial?</h2>
+            <p class="text-gray-600 mb-6">
+                Responde una pregunta clave para que podamos ofrecerte soluciones personalizadas.
+            </p>
+
+            <!-- Formulario de Captura -->
+            <form id="lead-form" class="space-y-6">
+                <!-- Pregunta Principal -->
+                <label for="challenge" class="block text-lg font-semibold text-gray-700">
+                    Elige tu desafío principal:
+                </label>
+                <select id="challenge" name="challenge" class="w-full p-3 bg-gray-100 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400">
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="Crecimiento">Crecimiento</option>
+                    <option value="Automatización">Automatización</option>
+                    <option value="Organización de Datos">Organización de Datos</option>
+                </select>
+
+                <!-- Información Básica -->
+                <label for="email" class="block text-lg font-semibold text-gray-700">
+                    Déjanos tu correo para enviarte una propuesta:
+                </label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Tu correo electrónico" 
+                    class="w-full p-3 bg-gray-100 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400" 
+                    required
+                >
+
+                <!-- Botón de Envío -->
+                <button 
+                    type="submit" 
+                    class="w-full py-3 bg-green-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 transition-all">
+                    Obtener Propuesta Personalizada
+                </button>
+            </form>
+
+            <!-- Mensaje de Éxito -->
+            <div id="success-message" class="hidden text-center mt-6">
+                <h3 class="text-2xl font-bold text-green-500 mb-2">¡Gracias!</h3>
+                <p class="text-gray-600">Nos pondremos en contacto contigo pronto con una propuesta personalizada.</p>
+            </div>
+        </div>
     </div>
 </section>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("lead-form");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        // Ocultar formulario
+        form.classList.add("hidden");
+
+        // Mostrar mensaje de éxito
+        successMessage.classList.remove("hidden");
+    });
+});
+</script>
 
 {% endblock %}
