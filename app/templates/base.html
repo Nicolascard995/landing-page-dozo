@@ -8,8 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Animate On Scroll (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Estilos personalizados -->
-    <link href="/static/css/style.css" rel="stylesheet"> <!-- Importar el style.css -->
+    <link href="/static/css/style.css" rel="stylesheet">
 </head>
 <body class="font-sans text-white">
     <!-- Navbar -->
@@ -88,6 +90,12 @@
     
     <!-- Scripts -->
     <script src="/static/js/script.js"></script>
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Inicialización de AOS
+    </script>
+    <!-- Menú y Navbar -->
     <script>
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');

@@ -2,7 +2,7 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-center lg:text-left h-screen flex flex-col lg:flex-row items-center justify-center px-6 lg:px-16">
+<section class="relative bg-gradient-to-r from-black via-gray-800 to-black text-center lg:text-left h-screen flex flex-col lg:flex-row it</section>ems-center justify-center px-6 lg:px-16">
     <!-- Contenido superpuesto -->
     <div class="relative z-10 lg:max-w-lg">
         <h1 class="text-6xl font-bold text-white drop-shadow-lg leading-tight">
@@ -12,12 +12,8 @@
             En <strong>Dozo Tech</strong>, llevamos tus datos al siguiente nivel con análisis avanzado e inteligencia artificial, generando resultados que marcan la diferencia.
         </p>
         <div class="mt-6 space-x-4">
-            <a href="#contact" class="px-6 py-3 bg-white/10 text-white rounded-lg shadow-lg hover:bg-green-400 hover:text-black transition-all">
-                ¡Hablemos!
-            </a>
-            <a href="#services" class="px-6 py-3 bg-white/10 text-white rounded-lg shadow-lg hover:bg-blue-400 hover:text-black transition-all">
-                Explorar Servicios
-            </a>
+            <a href="#contact" class="button">¡Hablemos!</a>
+            <a href="#services" class="button">Explorar Servicios</a>
         </div>
     </div>
     <div class="hidden lg:block lg:w-1/2">
@@ -27,43 +23,24 @@
 
 <!-- Customers Pain -->
 <section id="pain-points" class="py-16 bg-gray-800">
-    <div class="container mx-auto max-w-5xl px-6 lg:px-12">
-        <h2 class="text-4xl font-bold text-white mb-8 tracking-wide">¿Reconoces estos desafíos?</h2>
+    <div class="container mx-auto max-w-5xl px-8">
+        <h2 class="text-4xl font-bold mb-8">¿Reconoces estos desafíos?</h2>
         <p class="text-gray-400 leading-relaxed mb-12">
             Como líder de tu negocio, sabes que cada decisión cuenta. En <strong>Dozo Tech</strong>, te ayudamos a transformar tus datos en herramientas estratégicas, optimizando tus procesos y aumentando tu capacidad de competir en mercados exigentes.
         </p>
-
-        <!-- Grid con problemas comunes -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Problema 1 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
-                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-green-400">
-                    Información dispersa, decisiones lentas
-                </h3>
-                <p class="text-gray-400 group-hover:text-gray-300">
-                    Gestionar datos desorganizados retrasa decisiones clave. Centraliza y estructura la información para ganar claridad y velocidad.
-                </p>
-            </article>
-
-            <!-- Problema 2 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
-                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-green-400">
-                    Falta de análisis estratégico
-                </h3>
-                <p class="text-gray-400 group-hover:text-gray-300">
-                    Basar estrategias en suposiciones limita tu potencial. Aprovecha los datos como aliados para respaldar tu experiencia y visión empresarial.
-                </p>
-            </article>
-
-            <!-- Problema 3 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
-                <h3 class="text-xl font-semibold text-white mb-2 group-hover:text-green-400">
-                    Procesos manuales que frenan tu negocio
-                </h3>
-                <p class="text-gray-400 group-hover:text-gray-300">
-                    Operaciones ineficientes consumen recursos valiosos. Automatiza tareas críticas para liberar tiempo y enfocarte en lo que importa.
-                </p>
-            </article>
+            <div class="card" data-aos="fade-up">
+                <h3 class="text-xl font-semibold mb-4">Información dispersa</h3>
+                <p>Gestionar datos desorganizados retrasa decisiones clave. Centraliza y estructura la información para ganar claridad.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl font-semibold mb-4">Falta de análisis</h3>
+                <p>Aprovecha los datos como aliados para respaldar tu experiencia y visión empresarial.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl font-semibold mb-4">Procesos manuales</h3>
+                <p>Automatiza tareas críticas para liberar tiempo y enfocarte en lo que importa.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -101,17 +78,19 @@
 <section id="services" class="bg-gray-800 py-16">
     <div class="container mx-auto max-w-4xl px-6 text-left">
         <!-- Encabezado Principal -->
-        <h2 class="text-4xl font-bold text-white mb-8 tracking-wide">Nuestros <span class="italic">Servicios</span></h2>
+        <h2 class="text-4xl font-bold text-white mb-8 tracking-wide" data-aos="fade-up">
+            Nuestros <span class="italic">Servicios</span>
+        </h2>
         
         <!-- Introducción -->
-        <p class="text-gray-400 leading-relaxed mb-12">
+        <p class="text-gray-400 leading-relaxed mb-12" data-aos="fade-up" data-aos-delay="200">
             En <strong>Dozo Tech</strong>, te ayudamos a transformar los desafíos de tu negocio en ventajas competitivas. Nuestros servicios están diseñados para potenciar tu toma de decisiones, automatizar procesos y escalar tu negocio de forma inteligente.
         </p>
 
         <!-- Grid de Servicios -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <!-- Servicio 1 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
+            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group" data-aos="fade-up">
                 <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-green-400">
                     🔍 <span>Datos Convertidos en Insights</span>
                 </h3>
@@ -121,7 +100,7 @@
             </article>
 
             <!-- Servicio 2 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
+            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-green-400">
                     🤖 <span>Automatización y Machine Learning</span>
                 </h3>
@@ -131,7 +110,7 @@
             </article>
 
             <!-- Servicio 3 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
+            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
                 <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-green-400">
                     ☁️ <span>Soluciones en la Nube</span>
                 </h3>
@@ -141,7 +120,7 @@
             </article>
 
             <!-- Servicio 4 -->
-            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group">
+            <article class="p-6 bg-gray-900 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transform transition-all duration-300 group" data-aos="fade-up" data-aos-delay="600">
                 <h3 class="text-xl font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-green-400">
                     📊 <span>Consultoría Estratégica</span>
                 </h3>
@@ -154,60 +133,30 @@
 </section>
 
 
-<!-- Sección de Formulario para Capturar Leads -->
-<section class="flex items-center justify-center h-screen bg-gray-900">
-    <div class="bg-white shadow-lg rounded-lg flex max-w-3xl w-full overflow-hidden">
-        <!-- Formulario -->
-        <div class="w-full p-8 flex flex-col justify-center">
-            <h2 class="text-3xl font-bold mb-6 text-gray-800">¿Cuál es tu mayor desafío empresarial?</h2>
-            <p class="text-gray-600 mb-6">
-                Responde una pregunta clave para que podamos ofrecerte soluciones personalizadas.
-            </p>
 
-            <!-- Formulario de Captura -->
-            <form id="lead-form" class="space-y-6">
-                <!-- Pregunta Principal -->
-                <label for="challenge" class="block text-lg font-semibold text-gray-700">
-                    Elige tu desafío principal:
-                </label>
-                <select id="challenge" name="challenge" class="w-full p-3 bg-gray-100 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400">
-                    <option value="" disabled selected>Selecciona una opción...</option>
+<!-- Formulario -->
+<section class="bg-black text-white py-16">
+    <div class="container mx-auto max-w-xl">
+        <h2 class="text-3xl font-bold text-center mb-8">¿Cuál es tu mayor desafío?</h2>
+        <form id="lead-form" class="space-y-6">
+            <div>
+                <label for="challenge" class="block mb-2">Selecciona tu desafío:</label>
+                <select id="challenge" name="challenge" class="input-field">
+                    <option value="" disabled selected>Selecciona...</option>
                     <option value="Crecimiento">Crecimiento</option>
                     <option value="Automatización">Automatización</option>
-                    <option value="Organización de Datos">Organización de Datos</option>
+                    <option value="Datos">Organización de Datos</option>
                 </select>
-
-                <!-- Información Básica -->
-                <label for="email" class="block text-lg font-semibold text-gray-700">
-                    Déjanos tu correo para enviarte una propuesta:
-                </label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="Tu correo electrónico" 
-                    class="w-full p-3 bg-gray-100 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-400" 
-                    required
-                >
-
-                <!-- Botón de Envío -->
-                <button 
-                    type="submit" 
-                    class="w-full py-3 bg-green-400 text-white font-semibold rounded-lg shadow-md hover:bg-green-500 transition-all">
-                    Obtener Propuesta Personalizada
-                </button>
-            </form>
-
-            <!-- Mensaje de Éxito -->
-            <div id="success-message" class="hidden text-center mt-6">
-                <h3 class="text-2xl font-bold text-green-500 mb-2">¡Gracias!</h3>
-                <p class="text-gray-600">Nos pondremos en contacto contigo pronto con una propuesta personalizada.</p>
             </div>
-        </div>
+            <div>
+                <label for="email" class="block mb-2">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" class="input-field" placeholder="Ingresa tu correo" required>
+            </div>
+            <button type="submit" class="button w-full">Enviar</button>
+        </form>
     </div>
 </section>
 
-<!-- JavaScript -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("lead-form");

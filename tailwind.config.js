@@ -2,19 +2,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Personalización de colores
-        anahataGreen: '#00ff84', // Verde chakra
-        lightGray: '#f9f9f9',
-        darkGray: '#2a2d34',
-        customGradient: {
-          start: '#00ff84',
-          end: '#004d39',
-        },
-      },
-      backgroundImage: {
-        'gradient-spray': 'linear-gradient(135deg, #00ff84, #004d39)',
+        black: '#1B1B1B',
+        white: '#F7F7F7',
+        green: '#0BDA51',
+        blue: '#247BA0',
+        // Agrega el color adicional si decides uno más adelante
+        accent: '#FF5733', // Ejemplo de color adicional
       },
     },
   },
-  plugins: [],
 };
